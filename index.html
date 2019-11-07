@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Store App</title>
+  <!-- ZURB CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+    <div class="title-bar-title">Menu</div>
+</div>
+      
+<div class="top-bar" id="responsive-menu">
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Site Title</li>
+            <li class="has-submenu">
+              <a href="#0">One</a>
+            </li>
+            <li><a href="#0">Two</a></li>
+            <li><a href="#0">Three</a></li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div id="app" class="grid-x grid-padding-x">
+        <div class="cell medium-6 large-4">
+            <div class="card" style="width: 300px;">
+                <div class="card-divider">
+                  Add products
+                </div>
+                <div class="card-section">
+                  <form id="product-form">
+                    <div class="grid-x grid-padding-x">
+                        <div class="cell">
+                            <label>Product name
+                                <input type="text" id="name" placeholder="My product">
+                            </label>
+                        </div>
+                        <div class="cell">
+                            <label>Product name
+                                <input type="number" id="price" step="0.01" placeholder="15">
+                            </label>
+                        </div>
+                        <div class="cell">
+                            <label>Product type
+                                <select id="type">
+                                    <option disabled selected>Select</option>
+                                    <option value="t1">Type 1</option>
+                                    <option value="t2">Type 2</option>
+                                    <option value="t3">Type 3</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="cell">
+                            <button type="submit" class="button primary" href="#">Save product</button>
+                        </div>                  
+                    </div>
+                  </form>
+                </div>
+              </div>
+        </div>
+        <div id="product-list" class="cell medium-6 large-8">
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
